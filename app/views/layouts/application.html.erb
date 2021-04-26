@@ -18,22 +18,43 @@
   </head>
 
   <body>
-  <% link_to 'Inicio', root_path, class:"navbar-brand"%> 
-  <% link_to 'Doctores',  new_doctor_session_path, class:"navbar-brand"%>
-  <% link_to 'Pacientes', new_patient_session_path, class:"navbar-brand"%>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <% link_to 'Inicio', root_path, class:"navbar-brand"%>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <% link_to 'Doctores', new_doctor_session_path, class:"navbar-brand"%>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <% link_to 'Pacientes', new_patient_session_path, class:"navbar-brand"%>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="navbar-nav ml-auto">
+     
+        <% if doctor_signed_in?  %>
+           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> <%=current_doctor.email %></a>
+        <%= link_to 'Log Out', destroy_doctor_session_path, method: :DELETE, class:"nav-link" %>
+        
+        <% else %>
+          <%= link_to 'Sign in', new_doctor_session_path, class:"nav-link" %>
+        <% end  %>
+    </div> 
+    </div>
+  </nav>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <div>
 
+  <%= yield %>
 
-
-
-    <%= yield %>
-
-     <% link_to 'Inicio', root_path, class:"navbar-brand"%> 
-  <% link_to 'Doctores',  new_doctor_session_path, class:"navbar-brand"%>
-  <% link_to 'Pacientes', new_patient_session_path, class:"navbar-brand"%>
   </body>
 
   <!-- Empieza Footer-->
@@ -58,7 +79,7 @@
 			<li>&copy; ElianDesign. All rights reserved.</li><li class="text-white">Design:HTML5 UP</li>
 		</ul>
 		<br>
-        </div>
+  
         
   </footer>
 </html>
