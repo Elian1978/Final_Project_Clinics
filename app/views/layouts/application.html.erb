@@ -20,23 +20,13 @@
   <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <% link_to 'Inicio', root_path, class:"navbar-brand"%>
+      <%= link_to 'Inicio', root_path, class:"navbar-brand"%>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <% link_to 'Doctores', new_doctor_session_path, class:"navbar-brand"%>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <% link_to 'Pacientes', new_patient_session_path, class:"navbar-brand"%>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
+      <%= link_to 'Doctores', new_doctor_session_path, class:"navbar-brand"%>
+      <%= link_to 'Pacientes', new_patient_session_path, class:"navbar-brand"%>
+      <%= link_to 'Colaboradores', dashboard_doctors_index_path, class:"navbar-brand"%>
       <div class="navbar-nav ml-auto">
      
         <% if doctor_signed_in?  %>
@@ -52,14 +42,16 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
+<div class="container container-min-height">
   <%= yield %>
+</div>
 
   </body>
 
   <!-- Empieza Footer-->
-<footer class="container-fluid text-white font-weight-lighter bg-info mt-5 fixed-bottom">
-    <div class="container icons d-flex justify-content-between align-items-center pt-3">
+<div>
+<footer class="container-fluid text-white font-weight-lighter bg-info mt-1">
+    <div class="d-flex justify-content-between align-items-center pt-0">
       <h4 class="text-success"></h4>
         <ul class="footer-icons list-style-none text-white text-decoration-none">
             <li class="d-inline ">
@@ -78,8 +70,6 @@
 		  <ul class="menu">
 			<li>&copy; ElianDesign. All rights reserved.</li><li class="text-white">Design:HTML5 UP</li>
 		</ul>
-		<br>
-  
-        
   </footer>
+  </div>
 </html>

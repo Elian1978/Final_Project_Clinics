@@ -23,7 +23,7 @@ end
 10.times do 
       doctor = Doctor.create(
         email: Faker::Internet.email,
-        encrypted_password: '123123',
+        password: '123123',
         name: Faker::Name.name,
         specialty: Faker::Educator.subject,
         school: Faker::Educator.university,
@@ -35,7 +35,7 @@ end
 10.times do
     patient = Patient.create(
         email: Faker::Internet.email,
-        encrypted_password: '123123',
+        password: '123123',
         first_name: Faker::Name.first_name,
         last_name: Faker::Name.last_name,
         age: Faker::Number.between(from: 1, to: 120),

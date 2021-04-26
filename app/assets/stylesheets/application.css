@@ -83,3 +83,7 @@ html,body{
     .links a{
     margin-left: 4px;
     }
+
+    .container-min-height{
+        min-height: 25vh;
+    }
