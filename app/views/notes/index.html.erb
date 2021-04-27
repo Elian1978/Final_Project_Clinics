@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Notas del Doctor</h1>
+<h2>Notas Importantes</h2>
 
 <table>
   <thead>
@@ -15,19 +15,21 @@
 
   <tbody>
     <% @notes.each do |note| %>
-      <tr>
+      <tr>  
         <td><%= note.message %></td>
         <td><%= note.consult_reason %></td>
-        <td><%= note.patient_id %></td>
-        <td><%= note.doctor_id %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= note.patient.first_name %></td>
+        <td><%= note.doctor.name%></td>
+        <td><%= link_to 'Editar', edit_note_path(note), class:"text-white"  %></td>
+        <td ><%= link_to 'Mostrar', note, class:"text-white"  %></td>
+        <td><%= link_to 'Eliminar', note, method: :delete, data: { confirm: 'Are you sure?' }, class:"text-white" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<%= link_to 'New Note', new_note_path %>
+
+
+<%= link_to 'CREAR NUEVA NOTA', new_note_path, class:"btn btn-primary" %>
 
   

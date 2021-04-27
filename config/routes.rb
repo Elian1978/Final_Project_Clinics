@@ -4,7 +4,16 @@ Rails.application.routes.draw do
   end
   
   resources :notes
-  devise_for :doctors
+
+  devise_for :doctors, controllers:{
+    registrations: 'doctors/registration'
+  }
+
+
+  # devise_for :patients, controllers:{
+  #   registrations: 'patients/registration'
+  # }
+  
   resources :clinics
   devise_for :patients
   root "clinics#index"

@@ -3,6 +3,6 @@ class Doctor < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :notes, dependent: :destroy
   has_many :patients, through: :notes, dependent: :destroy
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable,
          :recoverable, :rememberable, :validatable
 end
