@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Notes</h1>
+<h1>Notas del Doctor</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Message</th>
-      <th>Consult reason</th>
-      <th>Patient</th>
-      <th>Doctor</th>
-      <th colspan="3"></th>
+      <th> <input class="controls" placeholder="Mensaje"></th>
+      <th> <input class="controls" placeholder="Razón de Consulta"></th>
+      <th> <input class="controls" placeholder="Paciente"></th>
+      <th> <input class="controls" placeholder="Doctor"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -27,7 +27,7 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Note', new_note_path %>
+
+  
