@@ -15,7 +15,7 @@
       <div class="navbar-nav ml-auto">
      
         <% if doctor_signed_in?  %>
-           <a class="nav-link disabled text-dark" href="#" tabindex="-1" aria-disabled="true"> <%=current_doctor.email %></a>
+           <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true"> <%=current_doctor.email %></a>
         <%= link_to 'Log Out', destroy_doctor_session_path, method: :DELETE, class:"nav-link text-white"  %>
         
         <% else %>

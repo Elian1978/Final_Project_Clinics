@@ -25,5 +25,7 @@
   <%= @clinic.information %>
 </p>
 
+<%= image_tag @clinic.logo if @clinic.logo.attached? %> 
+
 <%= link_to 'Edit', edit_clinic_path(@clinic) %> |
 <%= link_to 'Back', clinics_path %>

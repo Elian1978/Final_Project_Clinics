@@ -13,8 +13,8 @@
 
 
    <div class="field controls">
-    <%= form.label :image %>
-    <%= form.file_field :image, multiple: true %>
+    <%= form.file_field :logo, multiple: false %>
+    
   </div>
 
   <div class="field controls">
@@ -41,6 +41,8 @@
     <%= form.label :information %>
     <%= form.text_field :information %>
   </div>
+
+  <%= image_tag @clinic.logo if @clinic.logo.attached? %>
 
   <div class="actions">
     <%= form.submit%>
