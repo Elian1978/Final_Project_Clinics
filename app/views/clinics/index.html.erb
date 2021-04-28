@@ -38,6 +38,14 @@
 <div class="card-deck">
 <div class="row row-cols- row-cols-md-3">
   <% @clinics.each do |clinic| %>
+      
+      <td>
+          <% clinic.image.each do |image| %>
+          <%= image_tag image.variant(resize: '20x20').processed %> 
+          <% end %>
+        </td>
+
+
       <div class="col-md-6">
         <div class="card h-100">
           <div class="card-body">

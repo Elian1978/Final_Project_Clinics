@@ -5,8 +5,7 @@
       </button>
       <%= link_to 'Inicio', root_path, class:"navbar-brand text-white"%>
       <%= link_to 'Doctores', new_doctor_session_path, class:"navbar-brand text-white"%>
-      <%= link_to 'Pacientes', new_patient_session_path, class:"navbar-brand text-white"%>
-      <%= link_to 'Colaboradores', dashboard_doctors_index_path, class:"navbar-brand text-white"%>
+      <%= link_to 'Administradores', dashboard_doctors_index_path, class:"navbar-brand text-white"%>
       <div class="navbar-nav ml-auto">
      
         <% if doctor_signed_in?  %>
@@ -20,4 +19,3 @@
     </div>
   </nav>
 
-  
