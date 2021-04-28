@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Clinics</h2>
+<button type="button" class="btn btn-lg btn-danger" disabled>Clinicas Disponibles</button>
+
 <!-- 
 <table>
   <thead>
@@ -31,16 +32,20 @@
 </table> -->
 
 
+
+
 <!-- INICIO CARDS -->
 <div class="card-deck">
-<div class="row row-cols-1 row-cols-md-3">
+<div class="row row-cols- row-cols-md-3">
   <% @clinics.each do |clinic| %>
-      <div class="col-md-4">
-        <div class="card h-200">
+      <div class="col-md-6">
+        <div class="card h-100">
           <div class="card-body">
-            <h4 class="card-text">Nombre: <%= clinic.name %></h4> <br>
-            <h5 class="card-text">Teléfono: <%= clinic.phone %>Correo: <%= clinic.email %></h5>
+            <h4 class="card-text">Clínica: <%= clinic.name %></h4> 
+            <h5 class="card-text">Teléfono: <%= clinic.phone  %></h5>
+            <h5 class="card-text">Correo: <%= clinic.email %></h5>
             <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>
+             <%= link_to 'Obtener Cita', new_patient_session_path %>
           </div>
         </div>
       </div>

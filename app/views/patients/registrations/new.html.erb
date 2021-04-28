@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2>Sign uuuuuuuuuuuup</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "patients/shared/error_messages", resource: resource %>
@@ -23,13 +23,53 @@
 
   <div class="field">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "Nombre" %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "Apellidos" %>
   </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.text_field :age, autofocus: true, autocomplete: "Edad" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :language %>
+    <%= f.text_field :language, autofocus: true, autocomplete: "Idioma" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :sex %>
+    <%= f.text_field :sex, autofocus: true, autocomplete: "Sexo" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone, autofocus: true, autocomplete: "Teléfono" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :provincia %>
+    <%= f.text_field :provincia, autofocus: true, autocomplete: "Provincia" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :canton %>
+    <%= f.text_field :canton, autofocus: true, autocomplete: "Cantón" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :distrito %>
+    <%= f.text_field :distrito, autofocus: true, autocomplete: "Distrito" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :barrio %>
+    <%= f.text_field :barrio, autofocus: true, autocomplete: "Barrio" %>
+  </div>  
 
   <div class="actions">
     <%= f.submit "Sign up" %>
@@ -37,3 +77,4 @@
 <% end %>
 
 <%= render "patients/shared/links" %>
+
