@@ -7,16 +7,14 @@ Rails.application.routes.draw do
   resources :notes
 
   devise_for :doctors, controllers:{
-    registrations: 'doctors/registration'
+    registrations: 'doctors/registrations'
   }
 
-
-  # devise_for :patients, controllers:{
-  #   registrations: 'patients/registration'
-  # }
+  devise_for :patients, controllers:{
+    registrations: 'patients/registrations'
+  }
   
   resources :clinics
-  devise_for :patients
   root "clinics#index"
 
   get "welcome_doctor", to: 'notes#index', as: :doctor_root

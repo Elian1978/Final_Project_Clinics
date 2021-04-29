@@ -17,6 +17,12 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+jQuery(function(){
+  console.log('Ya esta instalado jQuery, y funciona!!')
+  console.log(jQuery)
+  console.log($)
+})
+
 $(document).ready(function(){
     $('#time').timepicker({
         timeFormat: 'h:mm p',
