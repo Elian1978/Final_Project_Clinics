@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-04-29
+  hour: 2021-04-29 10:58:50
+  speciality: MyString
+  patient: one
+  doctor: one
+  clinic: one
+
+two:
+  date: 2021-04-29
+  hour: 2021-04-29 10:58:50
+  speciality: MyString
+  patient: two
+  doctor: two
+  clinic: two

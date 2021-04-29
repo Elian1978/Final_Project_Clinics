@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_28_163832) do
+ActiveRecord::Schema.define(version: 2021_04_29_165850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,19 @@ ActiveRecord::Schema.define(version: 2021_04_28_163832) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.date "date"
+    t.time "hour"
+    t.bigint "patient_id", null: false
+    t.bigint "doctor_id", null: false
+    t.bigint "clinic_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["clinic_id"], name: "index_appointments_on_clinic_id"
+    t.index ["doctor_id"], name: "index_appointments_on_doctor_id"
+    t.index ["patient_id"], name: "index_appointments_on_patient_id"
   end
 
   create_table "clinics", force: :cascade do |t|
@@ -105,6 +118,9 @@ ActiveRecord::Schema.define(version: 2021_04_28_163832) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "appointments", "clinics"
+  add_foreign_key "appointments", "doctors"
+  add_foreign_key "appointments", "patients"
   add_foreign_key "notes", "doctors"
   add_foreign_key "notes", "patients"
 end

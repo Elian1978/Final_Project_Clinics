@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<button type="button" class="btn btn-lg btn-danger" disabled>Clinicas Disponibles</button>
+<button type="button" class="btn btn-lg btn-danger">Clinicas Disponibles</button>
 
 <!-- 
 <table>
@@ -40,11 +40,11 @@
 
 <% @clinics.each do |clinic| %>
 
-      <div class="col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
+      <div class="col-md-6 justify-content-center justify-content-md-start">
+        <div class="card h-100 special-card  border-info ">
+          <div class="card-body ">
             <%= image_tag clinic.logo if clinic.logo.attached? %>
-            <h4 class="card-text">Clínica: <%= clinic.name %></h4> 
+            <h4 class="card-text ">Clínica: <%= clinic.name %></h4> 
             <h5 class="card-text">Teléfono: <%= clinic.phone  %></h5>
             <h5 class="card-text">Correo: <%= clinic.email %></h5>
             <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>
@@ -54,3 +54,8 @@
       </div>
   <% end %>
 </div>
+
+
+
+
+
