@@ -21,26 +21,18 @@
     <%= form.time_select :hour %>
   </div>
 
-  <div class="field">
-    <%= form.label :speciality %>
-    <%= form.text_field :speciality %>
-  </div>
-
-  <div class="field">
-    <%= form.label :patient_id %>
-    <%= form.text_field :patient_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :doctor_id %>
-    <%= form.text_field :doctor_id %>
-  </div>
-
-  <div class="field">
+   <div class="field">
     <%= form.label :clinic_id %>
-    <%= form.text_field :clinic_id %>
-  </div>
+    <%= form.select :clinic_id , Clinic.pluck(:name, :id) %>
+    </div>
 
+    <div class="field">
+    <%= form.label :doctor_id %>
+    <%= form.select :doctor_id , Doctor.pluck(:name, :id) %>
+    </div>
+
+  <input type="text" id="time"/>
+   
   <div class="actions">
     <%= form.submit %>
   </div>

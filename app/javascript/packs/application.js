@@ -8,6 +8,23 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+
+import jQuery from "jquery"
+global.$ = global.jQuery = jQuery
+window.$ = window.jQuery = jQuery
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+$(document).ready(function(){
+    $('#time').timepicker({
+        timeFormat: 'h:mm p',
+        interval: 15,
+        minTime: '10',
+        maxTime: '6:00pm',
+        startTime: '10:00',
+        defaultTime: '11',
+        scrollbar: true
+    });
+});
