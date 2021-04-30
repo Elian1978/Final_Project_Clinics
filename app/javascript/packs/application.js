@@ -13,6 +13,7 @@ import jQuery from "jquery"
 global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
@@ -22,15 +23,18 @@ jQuery(function(){
   console.log(jQuery)
   console.log($)
 })
-
 $(document).ready(function(){
-    $('#time').timepicker({
-        timeFormat: 'h:mm p',
-        interval: 15,
-        minTime: '10',
-        maxTime: '6:00pm',
-        startTime: '10:00',
-        defaultTime: '11',
-        scrollbar: true
-    });
+  $('input.timepicker').timepicker({});
+});
+
+$('.timepicker').timepicker({
+  timeFormat: 'h:mm p',
+  interval: 60,
+  minTime: '10',
+  maxTime: '6:00​pm',
+  defaultTime: '11',
+  startTime: '10:00',
+  dynamic: false,
+  dropdown: true,
+  scrollbar: true
 });

@@ -16,10 +16,20 @@
     <%= form.date_select :date %>
   </div>
 
-  <div class="field">
+
+<div class="field">
     <%= form.label :hour %>
-    <%= form.time_select :hour %>
-  </div>
+    <% hours = {'9:00 a.m.' => 'cita1','9:30 a.m.' => 'cita2','10:00 a.m.' => 'cita3', '10:30 a.m.' => 'cita4','11:00 a.m.' => 'cita5'  }%>
+    <fieldset>
+       <% lista = hours %>
+       <% lista.each do |hour| %>
+          <%= form.radio_button :hour, hour[1] %>
+          <label for="<%= hour[1] %>"><%= hour[0] %></label> 
+       <% end %>
+    </fieldset>
+</div>
+
+
 
    <div class="field">
     <%= form.label :clinic_id %>
