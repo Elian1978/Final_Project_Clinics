@@ -48,9 +48,7 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    .button:hover{
-        background: cadetblue;
-    }
+
     p{
         text-align: center;
     }
@@ -149,4 +147,32 @@
         margin-right: auto;
         margin-top: 500px;
       }
+
+    .radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button-initial{
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.button-color{
+  background: rgb(11, 124, 128);
+  border-radius: 10px;
+}
+
+.h5-color{
+  color: #03273f;
+}
+
       

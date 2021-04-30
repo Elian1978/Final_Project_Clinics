@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+    <br>
   <div class="field">
     <%= form.label :date %>
     <%= form.date_select :date %>
@@ -23,7 +23,7 @@
     <fieldset>
        <% lista = hours %>
        <% lista.each do |hour| %>
-          <%= form.radio_button :hour, hour[1] %>
+          <%= form.radio_button :hour, hour[1], class:'radio' %>
           <label for="<%= hour[1] %>"><%= hour[0] %></label> 
        <% end %>
     </fieldset>
@@ -41,7 +41,6 @@
     <%= form.select :doctor_id , Doctor.pluck(:name, :id) %>
     </div>
 
-  <input type="text" id="time"/>
    
   <div class="actions">
     <%= form.submit %>
