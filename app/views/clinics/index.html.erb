@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <button type="button" class="btn btn-lg btn-danger">Clinicas Disponibles</button>
+<br>
 
 <!-- 
 <table>
@@ -51,7 +52,8 @@
              <%= link_to 'Obtener Cita', new_patient_session_path %>
           
           <div>
-                <button type="form" class=" btn btn-primary button-color">Obtener nueva Cita</button>
+                <%= link_to 'Obtener nueva Cita', new_appointment_path, class:"btn btn-primary button-color" %>
+              
           </div>
           
           </div>
