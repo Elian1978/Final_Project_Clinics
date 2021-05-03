@@ -1,4 +1,7 @@
 # README
+Para ver las historas de Usuario vsite:
+https://trello.com/b/Uxjl17Ph/proyecto-final-citas-m%C3%A9dicas
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
