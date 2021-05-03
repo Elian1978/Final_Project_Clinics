@@ -8,7 +8,12 @@ class ClinicsController < ApplicationController
 
   # GET /clinics/1 or /clinics/1.json
   def show
+    
   end
+
+  
+
+
 
   # GET /clinics/new
   def new

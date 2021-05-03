@@ -4,10 +4,15 @@ class NotesController < ApplicationController
   # GET /notes or /notes.json
   def index
     @notes = Note.all
+    @note= Note.new
   end
 
   # GET /notes/1 or /notes/1.json
   def show
+    respond_to do |format|
+    format.js { render layout: false }
+    format.html { render :show }
+    end
   end
 
   # GET /notes/new
@@ -27,6 +32,7 @@ class NotesController < ApplicationController
       if @note.save
         format.html { redirect_to @note, notice: "Note was successfully created." }
         format.json { render :show, status: :created, location: @note }
+        format.js
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @note.errors, status: :unprocessable_entity }
@@ -40,6 +46,7 @@ class NotesController < ApplicationController
       if @note.update(note_params)
         format.html { redirect_to @note, notice: "Note was successfully updated." }
         format.json { render :show, status: :ok, location: @note }
+        format.js
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @note.errors, status: :unprocessable_entity }
@@ -53,6 +60,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to notes_url, notice: "Note was successfully destroyed." }
       format.json { head :no_content }
+      format.js
     end
   end
 

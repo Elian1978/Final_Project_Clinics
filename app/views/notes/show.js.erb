@@ -1,0 +1,3 @@
+var elemento = document.querySelector('#note-content')
+//beforeend para insertar al final del documento, escape_javascript no llamar como javascript sino como html
+elemento.innerHTML = "<%= escape_javascript(render partial: 'notes/show', locals: {note: @note})%>"

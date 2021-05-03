@@ -231,5 +231,11 @@ object-fit: cover;
 }
 
 
+.reveal-if-active{
+  opacity:  0%;
+  max-height: 0;
+  overflow: hidden;
+}
+
 
       

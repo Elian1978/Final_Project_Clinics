@@ -1,0 +1,8 @@
+var elemento = document.querySelector('table tbody')
+//beforeend para insertar al final del documento, escape_javascript no llamar como javascript sino como html
+elemento.insertAdjacentHTML('beforeend', "<%= escape_javascript(render partial: 'notes/note', locals: {note: @note})%>")
+
+var content = document.querySelector('#note-content')
+content.value = ""
+
+alert('TEST')
