@@ -31,7 +31,7 @@
     
     <fieldset style="border:#F00 1px solid; background-color:#3376; rounded reveal-if-active">
        <% lista = hours %>
-       <% lista.uniq!.each do |hour| %>
+       <% lista.each do |hour| %>
           <%= form.radio_button :hour, hour[1], class:'radio' %>
           <label for="<%= hour[1] %>"><%= hour[0] %></label> 
        <% end %>

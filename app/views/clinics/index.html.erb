@@ -43,15 +43,17 @@
 
       <div class="col-md-6 justify-content-center justify-content-md-start">
         <div class="card h-100 special-card  border-info ">
-          <div class="card-body">
+          <div class="card-body ">
+          <div class="card-img-top img-fluid">
             <%= image_tag clinic.logo if clinic.logo.attached?%>
+          </div>
            <!-- <h4 class="card-text ">Clínica: <%= clinic.name %></h4> -->
             <h5 class="card-text ">Teléfono: <%= clinic.phone%></h5>
             <h5 class="card-text">E-mail: <%= clinic.email %></h5>
           <!--  <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>-->
           <div>
-              <%= link_to 'Obtener nueva Cita', new_patient_session_path, class:"btn btn-primary button-color" %>
-              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color" %>
+              <%= link_to 'Obtener nueva Cita', new_patient_session_path, class:"btn btn-primary button-color float-right" %>
+              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right" %>
           </div>
           </div>
         </div>
@@ -59,7 +61,6 @@
   <% end %>
 </div>
 </section>
-
 
 
 

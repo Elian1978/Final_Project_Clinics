@@ -1,5 +1,11 @@
 <td><%= note.message%></td>
 <td><%= note.consult_reason %></td>
+<td><%= note.patient.first_name%></td>
+<td><%= note.doctor.name%></td>
+
+
+
+
 <td><%= link_to 'Show', note, remote: true %></td>
 <td><%= link_to 'Edit', edit_note_path(note), remote: true %></td>
 <td><%= link_to 'Destroy', @note, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>

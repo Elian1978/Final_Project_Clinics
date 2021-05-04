@@ -17,6 +17,10 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app/javascript/packs/script.js"></script>
+    <script rel="stylesheet" href="style.css"></script>
+
+
     
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -26,6 +30,13 @@
     <%= render 'shared/navbar' %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <div class="weather-container">
+      <img class="icon">
+      <p class="weather"></p>
+      <p class="temp"></p>
+    </div>
+
 
       <div class="container container-min-height">
           <%= yield %>
