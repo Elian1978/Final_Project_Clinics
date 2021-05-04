@@ -1,16 +1,17 @@
 <%= form_with(model: @note, local: false) do |form| %>
  
 
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_field :message %>
+  <div class="form-group">
+  <%= form.label :message, class:"control-label" %>
+  <%= form.text_field :message, autofocus: true, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :consult_reason %>
-    <%= form.text_field :consult_reason %>
+  <div class="form-group">
+  <%= form.label :consult_reason, class:"control-label" %>
+  <%= form.text_field :consult_reason, autofocus: true, class:"form-control" %>
   </div>
 
+ 
    <div class="field">
     <%= form.label :patient_id  %>
     <%= form.select :patient_id  , Patient.pluck(:first_name, :id) %>

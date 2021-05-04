@@ -1,15 +1,14 @@
+<div>
+<%= link_to 'Mantenimiento Doctores',   doctor_session_path  , class:"btn btn-primary button-color float-right" %>
+<%= link_to 'Ingresar Nuevas Clinicas',  new_clinic_path, class:"btn btn-primary button-color float-right" %>
+</div>
+<br><br>
+<section>
 <h1>Gráfico de cantidad de citas por Cliníca</h1>
 <p>El gráfico detallala cantidad de citas que han sido obtenidas en todas las clínicas traves de la App</p>
+    <%= pie_chart @pie_chart, title: "Appointments"%>
+    <%=column_chart @pie_chart, title: "Appointments"%>
 
-
-
-
-
-  <%= pie_chart @pie_chart, title: "Appointments"%>
-   <%=column_chart @pie_chart, title: "Appointments"%>
-
-<%= link_to 'Ingresar Doctores',   doctor_session_path  , class:"navbar-brand text-white"%>
-
-<%= link_to 'Ingresar Clinicas',  new_clinic_path, class:"navbar-brand text-white"%>
+</section>
 
 
