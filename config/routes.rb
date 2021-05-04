@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   resources :appointments
   namespace :dashboard do
     get 'doctors/index'
@@ -20,6 +21,5 @@ Rails.application.routes.draw do
   get "welcome_doctor", to: 'notes#index', as: :doctor_root
   get "welcome_patient", to: 'appointments#new', as: :patient_root
 
-  
-
 end
+
