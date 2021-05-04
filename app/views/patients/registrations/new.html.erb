@@ -4,82 +4,80 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "patients/shared/error_messages", resource: resource %>
 
-  <div class="field controls">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field controls">
-    <%= f.label :password %>
+   <div class="form-group">
+    <%= f.label :email, class:"control-label" %>
+    <%= f.text_field :email, autofocus: true, class:"form-control" %>
+  </div>
+  
+
+  <div class="form-group">
+    <%= f.label :password, class:"control-label" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %>
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password,  class:"form-control" %>
   </div>
 
-  <div class="field controls">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  
+  <div class="form-group">
+    <%= f.label :password_confirmation, class:"control-label" %>
+    <%= f.password_field :password_confirmation, autofocus: true, class:"form-control" %>
   </div>
+
 
 
   <div class="form-group">
-        <label for="full_name_id" class="control-label">Nombre</label>
-        <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
-    </div>  
-
-
-  <div class="field controls">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "Nombre" %>
+    <%= f.label :first_name, class:"control-label" %>
+    <%= f.text_field :first_name, autofocus: true, class:"form-control" %>
   </div>
 
 
+    <div class="form-group">
+    <%= f.label :last_name, class:"control-label" %>
+    <%= f.text_field :last_name, autofocus: true, class:"form-control" %>
+    </div>
 
-  <div class="field controls">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "Apellidos" %>
-  </div>
+    <div class="form-group">
+    <%= f.label :age , class:"control-label" %>
+    <%= f.text_field :age , autofocus: true, class:"form-control" %>
+    </div>
 
-  <div class="field controls">
-    <%= f.label :age %>
-    <%= f.text_field :age, autofocus: true, autocomplete: "Edad" %>
-  </div>
+    <div class="form-group">
+    <%= f.label :language, class:"control-label" %>
+    <%= f.text_field :language, autofocus: true, class:"form-control" %>
+    </div>
 
-  <div class="field controls">
-    <%= f.label :language %>
-    <%= f.text_field :language, autofocus: true, autocomplete: "Idioma" %>
-  </div>
+    <div class="form-group">
+    <%= f.label :sex, class:"control-label" %>
+    <%= f.text_field :sex, autofocus: true, class:"form-control" %>
+    </div>
 
-   <div class="field controls">
-    <%= f.label :sex %>
-    <%= f.text_field :sex, autofocus: true, autocomplete: "Sexo" %>
-  </div>
+    <div class="form-group">
+    <%= f.label :phone, class:"control-label" %>
+    <%= f.text_field :phone, autofocus: true, class:"form-control" %>
+    </div>
 
-   <div class="field controls">
-    <%= f.label :phone %>
-    <%= f.text_field :phone, autofocus: true, autocomplete: "Teléfono" %>
-  </div>
+    <div class="form-group">
+    <%= f.label :provincia, class:"control-label" %>
+    <%= f.text_field :provincia, autofocus: true, class:"form-control" %>
+    </div>
 
-   <div class="field controls">
-    <%= f.label :provincia %>
-    <%= f.text_field :provincia, autofocus: true, autocomplete: "Provincia" %>
-  </div>
+    <div class="form-group">
+    <%= f.label :canton, class:"control-label" %>
+    <%= f.text_field :canton, autofocus: true, class:"form-control" %>
+    </div>
 
-  <div class="field controls">
-    <%= f.label :canton %>
-    <%= f.text_field :canton, autofocus: true, autocomplete: "Cantón" %>
-  </div>
-
-   <div class="field controls">
-    <%= f.label :distrito %>
-    <%= f.text_field :distrito, autofocus: true, autocomplete: "Distrito" %>
-  </div>
-
-  <div class="field controls">
-    <%= f.label :barrio %>
-    <%= f.text_field :barrio, autofocus: true, autocomplete: "Barrio" %>
-  </div>  
+     <div class="form-group">
+    <%= f.label :distrito, class:"control-label" %>
+    <%= f.text_field :distrito, autofocus: true, class:"form-control" %>
+    </div>
+    
+    <div class="form-group">
+    <%= f.label :barrio, class:"control-label" %>
+    <%= f.text_field :barrio, autofocus: true, class:"form-control" %>
+    </div>
+   
 
   <div class="actions">
     <%= f.submit "Sign up" %>

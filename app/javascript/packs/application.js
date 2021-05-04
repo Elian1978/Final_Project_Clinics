@@ -23,3 +23,7 @@ jQuery(function(){
   console.log(jQuery)
   console.log($)
 })
+
+import Chartkick from 'chartkick'
+import Highcharts from 'highcharts'
+window.Highcharts = Highcharts

@@ -50,6 +50,11 @@
     <%= form.select :doctor_id , Doctor.pluck(:name, :id) %>
     </div>
 
+     <div class="field">
+    <%= form.label :patient_id %>
+    <%= form.select :patient_id , Patient.pluck(:first_name, :id) %>
+    </div>
+
    
   <div class="actions">
     <%= form.submit %>
