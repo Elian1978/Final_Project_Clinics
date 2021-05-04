@@ -6,6 +6,6 @@
 
 
 
-<td><%= link_to 'Show', note, remote: true %></td>
-<td><%= link_to 'Edit', edit_note_path(note), remote: true %></td>
-<td><%= link_to 'Destroy', @note, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+
+<td><%= link_to 'Editar', edit_note_path(note) , class:"btn btn-primary button-color float-right" %></td>
+<td><%= link_to 'Eliminar', note, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-primary button-color float-right" %></td>
