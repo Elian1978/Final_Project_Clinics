@@ -237,12 +237,26 @@ object-fit: cover;
   overflow: hidden;
 }
 
-.style{
-  max-width:100%;
-  width:auto;
-  height:auto;
+.img_clinic {
+  min-height:10px;
+ 
 }
 
 
 
-      
+.weather-container {
+  background: #cccc;
+  text-align: center;
+}
+
+.weather{
+  font-size: 22px;
+  margin: 0;
+}
+
+.temp {
+  font-size: 45px;
+  margin: 0;
+  font-weight: bold;
+}
+

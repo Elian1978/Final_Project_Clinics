@@ -42,13 +42,12 @@
     <%= form.text_field :information %>
   </div>
 
-  <%= image_tag @clinic.logo if @clinic.logo.attached? %>
+  <%= image_tag @clinic.logo, class:"m-5 p-5" if @clinic.logo.attached? %>
 
   <div class="actions">
     <%= form.submit%>
   </div>
 
-  <td><%= link_to 'Show', clinic %></td>
-  <td><%= link_to 'Destroy', clinic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
 <% end %>
-        
+ 

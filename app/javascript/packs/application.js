@@ -9,20 +9,10 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 
-import jQuery from "jquery"
-global.$ = global.jQuery = jQuery
-window.$ = window.jQuery = jQuery
-
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-jQuery(function(){
-  console.log('Ya esta instalado jQuery, y funciona!!')
-  console.log(jQuery)
-  console.log($)
-})
 
 import Chartkick from 'chartkick'
 import Highcharts from 'highcharts'
