@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<div class="weather-container">
+      <img class="icon"><p class="weather text-white"></p>
+      <p class="temp text-white">La temperatura es de: </p>
+</div>
+
+
 <button type="button" class="btn btn-lg btn-danger">Clinicas Disponibles</button>
-<br>
+
+
 
 <!-- 
 <table>
@@ -45,15 +52,15 @@
         <div class="card h-100 special-card  border-info ">
           <div class="card-body ">
           <div class="card-img-top img-fluid">
-            <%= image_tag clinic.logo, class:"m-2 p-2 img_clinic"  if clinic.logo.attached?%>
+            <%= image_tag clinic.logo, class:"m-2 p-2 img_clinic "  if clinic.logo.attached?%>
           </div>
            <!-- <h4 class="card-text ">Clínica: <%= clinic.name %></h4> -->
             <h5 class="card-text ">Teléfono: <%= clinic.phone%></h5>
             <h5 class="card-text">E-mail: <%= clinic.email %></h5>
           <!--  <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>-->
-          <div class="mt-auto">
-              <%= link_to 'Obtener nueva Cita', new_patient_session_path, class:"btn btn-primary button-color float-right" %>
-              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right" %>
+          <div class="mt auto">
+              <%= link_to 'Obtener nueva Cita', new_patient_session_path, class:"btn btn-primary button-color float-right align-items-end course-button" %>
+              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right align-items-center"  %>
           </div>
           </div>
         </div>
@@ -62,6 +69,8 @@
 </div>
 </section>
 
+
+ 
 
 
 

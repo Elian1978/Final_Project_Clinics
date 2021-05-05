@@ -9,10 +9,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      
       <%= link_to 'Inicio', root_path, class:"navbar-brand text-white nav-item "%>
       <%= link_to 'Doctores', new_doctor_session_path, class:"navbar-brand text-white nav-item "%>
       <%= link_to 'Administradores', dashboard_doctors_index_path, class:"navbar-brand text-white nav-item "%>
       <div class="navbar-nav ml-auto " >
+
+      
      
         <% if doctor_signed_in?  %>
            <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true"> <%=current_doctor.email %></a>
@@ -29,6 +32,8 @@
         <% else %>
           <%= link_to 'Sign in', new_patient_session_path, class:"nav-link text-white" %>
         <% end  %>
+
+        
 
     </div> 
     </div>

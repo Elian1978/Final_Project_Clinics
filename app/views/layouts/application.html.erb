@@ -11,9 +11,10 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4ea700da30.js" crossorigin="anonymous"></script>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,11 +28,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <div class="weather-container">
-      <img class="icon">
-      <p class="weather"></p>
-      <p class="temp">La temperatura es de: </p>
-    </div>
+   
 
     
     <%= javascript_pack_tag 'script', 'data-turbolinks-track': 'reload' %>
@@ -42,3 +39,4 @@
     <%= render 'shared/footer' %>
 </body>
 </html>
+
