@@ -194,16 +194,19 @@
   .card-img-top{
     object-fit: cover;
     width: 100%;
+    text-align: center;
    
   }
 
   .img_clinic {
    max-width: 75%;
-   align-self: center;
+   text-align: center;
    
   }
 
   .embed-responsive .card-img-top {
     object-fit: cover;
   }
+
+  
   

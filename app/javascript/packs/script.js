@@ -7,15 +7,13 @@ jQuery(function(){
     console.log(jQuery)
     console.log($)
   })
-  
 
-
-var city = "Orlando";
+var city = "Guapiles";
 
 $.getJSON(
     "https://api.openweathermap.org/data/2.5/weather?q=" + 
     city + 
-    "&APPID=3873261c06ffc00808aa1406e8f633c0", 
+    "&APPID=3873261c06ffc00808aa1406e8f633c0&units=metric", 
 
 function(data) {
     console.log("FUNCIONA");

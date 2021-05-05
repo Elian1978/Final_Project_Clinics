@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Appointments</h1>
+<h1>Citas</h1>
 
 <table>
   <thead>
     <tr>
       <th>Date</th>
       <th>Hour</th>
-      <th>Speciality</th>
       <th>Patient</th>
       <th>Doctor</th>
       <th>Clinic</th>
@@ -22,17 +21,13 @@
       <tr>
         <td><%= appointment.date %></td>
         <td><%= appointment.hour %></td>
-        <td><%= appointment.patient_id %></td>
-        <td><%= appointment.doctor_id %></td>
-        <td><%= appointment.clinic_id %></td>
-        <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= appointment.patient.first_name%></td>
+        <td><%= appointment.doctor.name%></td>
+        <td><%= appointment.clinic.name%></td>
+        <td><%= link_to 'Show', appointment, class:"btn btn-primary button-color float-right"  %></td>
+        <td><%= link_to 'Edit', edit_appointment_path(appointment), class:"btn btn-primary button-color float-right" %></td>
+        <td><%= link_to 'Destroy', appointment, class:"btn btn-primary button-color float-right", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Appointment', new_appointment_path %>

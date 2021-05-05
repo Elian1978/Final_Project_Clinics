@@ -2,7 +2,7 @@
 
 <div class="weather-container">
       <img class="icon"><p class="weather text-white"></p>
-      <p class="temp text-white">La temperatura es de: </p>
+      <p class="temp text-white">La temperatura es de:</p>
 </div>
 
 
@@ -45,22 +45,22 @@
 <!-- INICIO CARDS -->
 <section class="mx-5 py-5">
 <div class=" border-top pt-4">
-<div class="card-deck">
+<div class="card-deck ">
 <% @clinics.each do |clinic| %>
 
-      <div class="col-md-6 justify-content-center justify-content-md-start">
-        <div class="card h-100 special-card  border-info ">
+      <div class="col-md-6 justify-content-center justify-content-md-start ">
+        <div class="card h-100 special-card  border-info  ">
           <div class="card-body ">
           <div class="card-img-top img-fluid">
-            <%= image_tag clinic.logo, class:"m-2 p-2 img_clinic "  if clinic.logo.attached?%>
+            <%= image_tag clinic.logo, class:"m-1 p-1 img_clinic "  if clinic.logo.attached?%>
           </div>
            <!-- <h4 class="card-text ">Clínica: <%= clinic.name %></h4> -->
             <h5 class="card-text ">Teléfono: <%= clinic.phone%></h5>
             <h5 class="card-text">E-mail: <%= clinic.email %></h5>
           <!--  <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>-->
           <div class="mt auto">
-              <%= link_to 'Obtener nueva Cita', new_patient_session_path, class:"btn btn-primary button-color float-right align-items-end course-button" %>
-              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right align-items-center"  %>
+              <%= link_to 'Obtener nueva Cita', new_patient_session_path, class:"btn btn-primary button-color float-right mt-auto" %>
+              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right mt-auto"  %>
           </div>
           </div>
         </div>
@@ -70,7 +70,6 @@
 </section>
 
 
- 
 
 
 
