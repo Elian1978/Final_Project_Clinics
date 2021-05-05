@@ -1,11 +1,12 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[ show edit update destroy ]
-  before_action :authenticate_doctor!
+  before_action :authenticate_doctor!, except: %i[ new create ] 
+  before_action :authenticate_patient!, only: %i[ new create ] 
 
   # GET /appointments or /appointments.json
   def index
     
-    @appointments = Appointment.all
+    @appointments = current_doctor.appointments
   end
 
 

@@ -51,12 +51,8 @@
     </div>
 
      <div class="field">
-    <%= form.label :patient_id %>
-    <%= form.select :patient_id , Patient.pluck(:first_name, :id) %>
+    <%= form.hidden_field :patient_id, value: current_patient.id %>
     </div>
-
-
-
    
   <div class="actions">
     <%= form.submit %>
