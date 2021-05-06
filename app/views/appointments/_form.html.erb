@@ -10,21 +10,13 @@
       </ul>
     </div>
   <% end %>
-   
-
-  ///////////////AGREGAR NOMBRE DE CLINICA, NO SELECT
-  <div class="field">
-   <%= form.label :name%>
-    <%= form.text_field :name %>
-  </div>
-   <br>
 
   <div class="field">
     <%= form.label :date %>
     <%= form.date_select :date %>
   </div>
   
-
+<div>
   <div class="row btn-group">
     <%= form.label :hour %>
     <% hours= {'9:00 a.m.' => 'cita1','9:30 a.m.' => 'cita2','10:00 a.m.' => 'cita3', '10:30 a.m.' => 'cita4','11:00 a.m.' => 'cita5','11:30 a.m.' => 'cita6', '1:30 p.m.' => 'cita7', '2:00 p.m.' => 'cita8', '2:30 p.m.' => 'cita9', '3:00 p.m.' => 'cita10', '3:30 p.m.' => 'cita11', '4:00 p.m.' => 'cita12', '4:30 p.m.' => 'cita13', '5:00 p.m.' => 'cita14'}%>
@@ -38,6 +30,8 @@
     </fieldset>
   </div>
 
+ 
+</div>
 
 
    <div class="field">

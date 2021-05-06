@@ -17,9 +17,16 @@
     }
     h1{
         text-align: center;
-        color: #1a2537;
+        color: #113b7e;
         font-size: 40px;
     }
+
+    h2{
+      text-align: center;
+      color: #1a2537;
+      font-size: 20px;
+    }
+
     input[type="text"],
     input[type="password"]{
         font-size: 20px;
