@@ -26,7 +26,7 @@ gem 'faker'
 gem 'chartkick'
 gem 'highcharts-rails'
 gem 'groupdate'
-
+gem 'aws-sdk-s3'
 gem 'devise'
 
 # Use Active Storage variant

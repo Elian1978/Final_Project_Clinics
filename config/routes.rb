@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  namespace :maintenance do
+    resources :doctors
+  end
   resources :appointments#, except: [:new :create]
   namespace :dashboard do
     get 'doctors/index'
