@@ -1,8 +1,9 @@
 <div>
 
 <% if admin_signed_in?  %>
-        <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true"> <%=current_admin.email %></a>
-        <%= link_to 'Log Out', destroy_admin_session_path, method: :DELETE, class:"btn btn-primary button-color float-right" %>
+         
+        <a class="nav-link disabled text-danger" href="#" tabindex="-1" aria-disabled="true"> <%=current_admin.email %></a>
+        <%= link_to 'CERRAR SESION', destroy_admin_session_path, method: :DELETE, class:"btn btn-primary button-color float-right" %>
         
 <% end  %> 
 
