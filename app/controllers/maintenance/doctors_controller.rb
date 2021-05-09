@@ -25,7 +25,7 @@ class Maintenance::DoctorsController < ApplicationController
 
     respond_to do |format|
       if @doctor.save
-        format.html { redirect_to @doctor, notice: "Doctor was successfully created." }
+        format.html { redirect_to maintenance_doctor_path @doctor, notice: "Doctor was successfully created." }
         format.json { render :show, status: :created, location: @doctor }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +64,6 @@ class Maintenance::DoctorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def doctor_params
-      params.require(:doctor).permit(:sign_up, keys: [:name, :specialty, :school, :language, :phone])
+      params.require(:doctor).permit([:email, :password, :password_confirmation, :name, :specialty, :school, :phone])
     end
 end

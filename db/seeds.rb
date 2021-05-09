@@ -8,17 +8,15 @@
 
 Clinic.destroy_all 
 
-10.times do 
-    clinic = Clinic.create(
-      name: Faker::Name.name,
-      phone: Faker::PhoneNumber.cell_phone,
-      email: Faker::Internet.email,
-      adress: Faker::Address.city,
-      information: Faker::Lorem.sentence(word_count: 5),
-      logo: " "
-     
-    )
-end
+# 4.times do 
+#     clinic = Clinic.create(
+#       name: Faker::Name.name,
+#       phone: Faker::PhoneNumber.cell_phone,
+#       email: Faker::Internet.email,
+#       adress: Faker::Address.city,
+#       information: Faker::Lorem.sentence(word_count: 5),
+#     )
+# end
 
 10.times do 
       doctor = Doctor.create(

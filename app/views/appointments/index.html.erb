@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Citas</h1>
+<%= link_to 'Regresar',  doctor_root_path, class:"btn btn-primary button-color float-right" %>
 
 <table>
   <thead>
@@ -24,10 +25,10 @@
         <td><%= appointment.patient.first_name%></td>
         <td><%= appointment.doctor.name%></td>
         <td><%= appointment.clinic.name%></td>
-        <td><%= link_to 'Show', appointment, class:"btn btn-primary button-color float-right"  %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment), class:"btn btn-primary button-color float-right" %></td>
         <td><%= link_to 'Destroy', appointment, class:"btn btn-primary button-color float-right", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
+
 </table>

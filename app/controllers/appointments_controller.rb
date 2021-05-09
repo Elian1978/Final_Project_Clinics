@@ -26,10 +26,9 @@ class AppointmentsController < ApplicationController
   # POST /appointments or /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-    1/0
     respond_to do |format|
       if @appointment.save
-        format.html { redirect_to @appointment, notice: "Appointment was successfully created." }
+        format.html { redirect_to @appointment, notice: "TU CITA FUE CREADA CORRECTAMENTE" }
         format.json { render :show, status: :created, location: @appointment }
       else
         format.html { render :new, status: :unprocessable_entity }

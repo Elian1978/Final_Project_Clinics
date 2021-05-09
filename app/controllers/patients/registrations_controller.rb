@@ -60,3 +60,4 @@ class Patients::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 end
+
