@@ -1,4 +1,5 @@
 class Maintenance::DoctorsController < ApplicationController
+  
   before_action :set_doctor, only: %i[ show edit update destroy ]
 
   # GET /maintenance/doctors or /maintenance/doctors.json

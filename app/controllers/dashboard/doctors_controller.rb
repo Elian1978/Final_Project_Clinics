@@ -1,5 +1,5 @@
 class Dashboard::DoctorsController < ApplicationController
-
+    before_action :authenticate_admin!
 
 def index
 #  @pie_chart = Appointment.group_by_month(:created_at, last: 12).count

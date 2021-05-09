@@ -1,4 +1,12 @@
 <div>
+
+<% if admin_signed_in?  %>
+        <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true"> <%=current_admin.email %></a>
+        <%= link_to 'Log Out', destroy_admin_session_path, method: :DELETE, class:"btn btn-primary button-color float-right" %>
+        
+<% end  %> 
+
+
 <%= link_to 'Mantenimiento Doctores',    maintenance_doctors_path , class:"btn btn-primary button-color float-right" %>
 <%= link_to 'Ingresar Nuevas Clinicas',  new_clinic_path, class:"btn btn-primary button-color float-right" %>
 </div>
