@@ -4,6 +4,12 @@ Esta aplicación web escrita en Ruby on Rails tiene como fin poder ver las disti
 
 El objetivo de la aplicación es que sea simple de usar, que tanto Pacientes, como Doctores y Administradores puedan ingresar a la Aplicación, que los botones estén siempre visibles y accesibles y hacer uso de los recursos que la misma ofrece.
 
+La aplicación hace una consulta a una Appi de clima y nos muestra la temperatura actual en una determinada ciudad, en nuestro caso estamos consultando Guápiles.
+
+Los doctores, podran crear sus propias notas para cada paciente que atiendan; así como ver las citas que se le han sido asignadas.
+
+Los administradores podrán ver datos estadisticos a traves de graficos, donde podrán ver la cantidad de citas que han sigo asignadas desde la aplicación para cada clínica
+
 
 Modelos
 
@@ -23,6 +29,15 @@ Modelos
 Para ver las historas de Usuario visite:
 https://trello.com/b/Uxjl17Ph/proyecto-final-citas-m%C3%A9dicas
 
+Instrucciones de deployment, configuración y puesta en marcha.
+Puede ingresar al link de Heroku, y una vez ahí navegar por el sitio.
+
+Tambien puedes hacer clon del repositorio de Github, y una vez clonado, correr el seed para cargar datos ficticios para la aplicación.
+
+Para loguearse como Administrador, use credenciales de Administrador
+Para loguearse como Doctor, el administrador le debera proporcionar un email y contraseña
+
+Para ello puedes crear un Patient, haciendo Sign up
 # Credenciales 
 Para Loguearse como administrador:
 Clave para dministrador: 
