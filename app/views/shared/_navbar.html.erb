@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container-fluid">
       
       <%= link_to root_path, class: "navbar-brand" do %>
         <img src="<%= asset_path 'logo_provisional.svg' %>" width="50"/>
@@ -9,11 +10,18 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      
-      <%= link_to 'Inicio', root_path, class:"navbar-brand text-white nav-item "%>
-      <%= link_to 'Doctores', new_doctor_session_path, class:"navbar-brand text-white nav-item "%>
-      <%= link_to 'Administradores', dashboard_doctors_index_path, class:"navbar-brand text-white nav-item "%>
-      <div class="navbar-nav ml-auto " >
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <%= link_to 'Inicio', root_path, class:"navbar-brand text-white nav-item "%>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Doctores', new_doctor_session_path, class:"navbar-brand text-white nav-item "%>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Administradores', dashboard_doctors_index_path, class:"navbar-brand text-white nav-item "%>
+        </li>
+        <div class="navbar-nav ml-auto " >
         <% if doctor_signed_in?  %>
             <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true"> <%=current_doctor.email %></a>
         <%= link_to 'Log Out', destroy_doctor_session_path, method: :DELETE, class:"nav-link text-white"  %>
@@ -29,6 +37,8 @@
         <% else %>
             <%= link_to 'Paciente', new_patient_session_path, class:"nav-link text-white" %>
         <% end  %>
-    </div> 
-</nav>
-
+      </ul>
+    </div>
+    </div>
+  </div> 
+</nav>    
