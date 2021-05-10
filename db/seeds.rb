@@ -18,7 +18,7 @@ Clinic.destroy_all
 #     )
 # end
 
-10.times do 
+5.times do 
       doctor = Doctor.create(
         email: Faker::Internet.email,
         password: '123123',
@@ -30,7 +30,7 @@ Clinic.destroy_all
       )
 end
 
-10.times do
+5.times do
     patient = Patient.create(
         email: Faker::Internet.email,
         password: '123123',
