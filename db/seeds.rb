@@ -1,3 +1,5 @@
+info = ["Ultrasonido ₡35.000", "Placas ₡35.000", "Odontologia ₡20.000", "Medicina General ₡25.000 ", "Mamografía ₡20.000","Ginecología ₡25.000", "Uología ₡25.000"]
+
 Clinic.destroy_all 
 
 5.times do 
@@ -6,7 +8,7 @@ Clinic.destroy_all
       phone: Faker::PhoneNumber.cell_phone,
       email: Faker::Internet.email,
       adress: Faker::Address.city,
-      information: Faker::Lorem.sentence(word_count: 5),
+      information: info.sample,
       logo: Faker::Avatar.image,
     )
 end
