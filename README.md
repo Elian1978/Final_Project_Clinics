@@ -1,24 +1,54 @@
-# README
+Introducción
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta aplicación web escrita en Ruby on Rails tiene como fin poder ver las distintas Clinícas que existen en Guçapiles, así como servicios que ofrecen y de esta forma obtener cita en una clínica especifica vía web. Esto debido a que en este momento para hacer consultas de servicios médicos y obtener una cita en Guápiles es dificil, ya que solo se puede obtener a traves de diferentes consultas telefónicas.
 
-Things you may want to cover:
+El objetivo de la aplicación es que sea simple de usar, que tanto Pacientes, como Doctores y Administradores puedan ingresar a la Aplicación, que los botones estén siempre visibles y accesibles y hacer uso de los recursos que la misma ofrece.
 
-* Ruby version
+La aplicación hace una consulta a una Appi de clima y nos muestra la temperatura actual en una determinada ciudad, en nuestro caso estamos consultando Guápiles.
 
-* System dependencies
+Los doctores, podran crear sus propias notas para cada paciente que atiendan; así como ver las citas que se le han sido asignadas.
 
-* Configuration
+Los administradores podrán ver datos estadisticos a traves de graficos, donde podrán ver la cantidad de citas que han sigo asignadas desde la aplicación para cada clínica
 
-* Database creation
 
-* Database initialization
+Modelos
 
-* How to run the test suite
+    patient: Modela los Paciente de nuestra aplicación. Hace uso de la gema devise para hacer un registro de Pacientes y tener login. Tiene muchas notas. has_many :notes
 
-* Services (job queues, cache servers, search engines, etc.)
+    doctor: Modela los Doctores de nuestra aplicación. Hace uso de la gema devise para hacer un registro de Doctores y tener login. Tiene muchas notas, muchas citas y muchos pacientes. has_many :notes, has_many :appointments,has_many :patients
 
-* Deployment instructions
+    admin: Modela los Administradores de nuestra aplicación. Hace uso de la gema devise para hacer un registro de Administradores y tener login. 
 
-* ...
+    appointment: Son las citas de los pacientes. Tiene  belongs_to :patient, belongs_to :doctor, belongs_to :clinic
+
+    clinic: Son las Clinicas disponibles.
+
+    note: Son las notas de diferentes pacientes. Tiene  belongs_to :patient,  belongs_to :doctor
+
+
+Para ver las historas de Usuario visite:
+https://trello.com/b/Uxjl17Ph/proyecto-final-citas-m%C3%A9dicas
+
+Instrucciones de deployment, configuración y puesta en marcha.
+Puede ingresar al link de Heroku, y una vez ahí navegar por el sitio.
+
+Tambien puedes hacer clon del repositorio de Github, y una vez clonado, correr el seed para cargar datos ficticios para la aplicación.
+
+Para loguearse como Administrador, use credenciales de Administrador
+Para loguearse como Doctor, el administrador le debera proporcionar un email y contraseña
+
+Para ello puedes crear un Patient, haciendo Sign up
+# Credenciales 
+Para Loguearse como administrador:
+Clave para dministrador: 
+    Email: admin@example.com
+    Password: 123123
+
+# Herramientas usadas
+- HTML
+- CSS/SCSS
+- Ruby on Rails '2.7.2'
+- Devise (auth)
+- Faker gem for fill data
+
+

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% if doctor_signed_in?  %>
+         
+        <%= link_to 'CERRAR SESION', destroy_doctor_session_path, method: :DELETE, class:"btn btn-primary button-color float-right" %>
+        
+<% end  %> 
+
+
+
+<%= link_to 'Ver Citas',  appointments_path, class:"btn btn-primary button-color float-right" %>
+
+ 
+<h2>Notas Importantes</h2>
+<%= render 'form', message: @message %> 
+
+<table>
+  <thead>
+    <tr>
+      <th> <input class="controls" placeholder="Mensaje"></th>
+      <th> <input class="controls" placeholder="Razón de Consulta"></th>
+      <th> <input class="controls" placeholder="Paciente"></th>
+      <th> <input class="controls" placeholder="Doctor"></th>
+      <th> <input class="controls" placeholder="Fecha/Hora"></th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+     <%= render 'note', note: note %>
+    <% end %>
+  </tbody>
+</table>
+<br>

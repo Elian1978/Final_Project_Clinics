@@ -11,20 +11,29 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4ea700da30.js" crossorigin="anonymous"></script>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <%= render 'shared/navbar' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> 
 
-    <%= yield %>
-  </body>
+    <%= javascript_pack_tag 'script', 'data-turbolinks-track': 'reload' %>
+      <div class="container container-min-height">
+          <%= yield %>
+      </div>
+    
+    <!--  <%= render 'shared/footer' %>  -->
+</body>
 </html>
 
-
-
-      </head>

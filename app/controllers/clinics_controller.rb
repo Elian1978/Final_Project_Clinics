@@ -8,7 +8,12 @@ class ClinicsController < ApplicationController
 
   # GET /clinics/1 or /clinics/1.json
   def show
+    
   end
+
+  
+
+
 
   # GET /clinics/new
   def new
@@ -64,6 +69,6 @@ class ClinicsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def clinic_params
-      params.require(:clinic).permit(:name, :phone, :email, :adress, :information)
+      params.require(:clinic).permit(:name, :phone, :email, :adress, :information, :logo)
     end
 end

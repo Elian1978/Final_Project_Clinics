@@ -1,0 +1,5 @@
+var elem = document.querySelector('#note-<%= @note.id %>')
+elem.innerHTML = "<%= j render partial: 'notes/note-detail', locals: { note: @note }%>"
+
+var div = document.querySelector('#note-content')
+div.innerHTML = ''

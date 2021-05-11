@@ -1,0 +1,13 @@
+<td><%= note.message%></td>
+<td><%= note.consult_reason %></td>
+<td><%= note.patient.first_name%></td>
+<td><%= note.doctor.name%></td>
+<td><%= note.created_at%></td>
+
+
+
+
+
+
+<td><%= link_to 'Editar', edit_note_path(note) , class:"btn btn-primary button-color float-right" %></td>
+<td><%= link_to 'Eliminar', note, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-primary button-color float-right" %></td>

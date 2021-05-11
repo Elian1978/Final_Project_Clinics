@@ -1,7 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Clinics</h1>
+<div class="weather-container">
+      <img class="icon"><p class="weather text-white"></p>
+      <p class="temp text-white">La temperatura es de:</p>
+</div>
 
+
+<button type="button" class="btn btn-lg btn-danger">Clinicas Disponibles</button>
+
+
+
+<!-- 
 <table>
   <thead>
     <tr>
@@ -28,8 +37,41 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
-<br>
 
-<%= link_to 'New Clinic', new_clinic_path %>
+
+
+<!-- INICIO CARDS -->
+<section class="mx-5 py-5">
+<div class=" border-top pt-4">
+<div class="card-deck ">
+<% @clinics.each do |clinic| %>
+
+      <div class="col-md-6 justify-content-center justify-content-md-start ">
+        <div class="card h-100 special-card  border-info  ">
+          <div class="card-body ">
+          <div class="card-img-top img-fluid">
+            <%= image_tag clinic.logo, class:"m-1 p-1 img_clinic "  if clinic.logo.attached?%>
+          </div>
+           <!-- <h4 class="card-text ">Clínica: <%= clinic.name %></h4> -->
+            <h5 class="card-text ">Teléfono: <%= clinic.phone%></h5>
+            <h5 class="card-text">E-mail: <%= clinic.email %></h5>
+          <!--  <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>-->
+          <div class="mt auto">
+              <%= link_to 'Obtener nueva Cita', new_clinic_appointment_path(clinic.id), class:"btn btn-primary button-color float-right mt-auto" %>
+              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right mt-auto"  %>
+          
+          
+          </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>
+</section>
+
+
+
+
+

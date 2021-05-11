@@ -1,0 +1,23 @@
+<div>
+
+<% if admin_signed_in?  %>
+         
+        <a class="nav-link disabled text-danger" href="#" tabindex="-1" aria-disabled="true"> <%=current_admin.email %></a>
+        <%= link_to 'CERRAR SESION', destroy_admin_session_path, method: :DELETE, class:"btn btn-primary button-color float-right" %>
+        
+<% end  %> 
+
+
+<%= link_to 'Mantenimiento Doctores',    maintenance_doctors_path , class:"btn btn-primary button-color float-right" %>
+<%= link_to 'Ingresar Nuevas Clinicas',  new_clinic_path, class:"btn btn-primary button-color float-right" %>
+</div>
+<br><br>
+<section>
+<h1>Gráfico de cantidad de citas por Cliníca</h1>
+<p>El gráfico detallala cantidad de citas que han sido obtenidas en todas las clínicas traves de la App</p>
+    <%= pie_chart @pie_chart, title: "Appointments"%>
+    <%=column_chart @pie_chart, title: "Appointments"%>
+
+</section>
+
+
