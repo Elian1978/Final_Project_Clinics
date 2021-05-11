@@ -4,20 +4,16 @@ Rails.application.routes.draw do
   namespace :maintenance do
     resources :doctors
   end
-  resources :appointments#, except: [:new :create]
+  resources :appointments#, except:[:new :create]
   namespace :dashboard do
     get 'doctors/index'
   end
   
   resources :notes
 
-  devise_for :doctors, controllers:{
-    registrations: 'doctors/registrations'
-  }
+  devise_for :doctors
 
-  devise_for :patients, controllers:{
-    registrations: 'patients/registrations'
-  }
+  devise_for :patients
   
   resources :clinics do
     resources :appointments, only: [:new, :create]

@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<% if doctor_signed_in?  %>
+         
+        <%= link_to 'CERRAR SESION', destroy_doctor_session_path, method: :DELETE, class:"btn btn-primary button-color float-right" %>
+        
+<% end  %> 
+
+
+
 <%= link_to 'Ver Citas',  appointments_path, class:"btn btn-primary button-color float-right" %>
 
  
