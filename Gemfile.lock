@@ -63,7 +63,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     aws-eventstream (1.1.1)
-    aws-partitions (1.452.0)
+    aws-partitions (1.453.0)
     aws-sdk-core (3.114.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -102,6 +102,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     faker (2.17.0)
       i18n (>= 1.6, < 2)
@@ -243,6 +247,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   chartkick
   devise
+  dotenv-rails
   faker
   groupdate
   highcharts-rails

@@ -44,25 +44,25 @@
 
 <!-- INICIO CARDS -->
 <section class="mx-5 py-5">
-<div class=" border-top pt-4">
+<div class=" border-top pt-3 ">
 <div class="card-deck ">
 <% @clinics.each do |clinic| %>
 
-      <div class="col-md-6 justify-content-center justify-content-md-start ">
+      <div class="col-md-6 justify-content-center justify-content-md-start mb-5">
         <div class="card h-100 special-card  border-info  ">
           <div class="card-body ">
-          <div class="card-img-top img-fluid">
-            <%= image_tag clinic.logo, class:"m-1 p-1 img_clinic "  if clinic.logo.attached?%>
+          <div class="card-img-top img-fluid px-0">
+            <%= image_tag clinic.logo, class:"img_clinic "  if clinic.logo.attached?%>
+            
           </div>
+          <br>
            <!-- <h4 class="card-text ">Clínica: <%= clinic.name %></h4> -->
             <h5 class="card-text ">Teléfono: <%= clinic.phone%></h5>
             <h5 class="card-text">E-mail: <%= clinic.email %></h5>
           <!--  <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>-->
-          <div class="mt auto">
-              <%= link_to 'Obtener nueva Cita', new_clinic_appointment_path(clinic.id), class:"btn btn-primary button-color float-right mt-auto" %>
-              <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right mt-auto"  %>
-          
-          
+          <div class="mb-5">
+              <%= link_to 'Obtener nueva Cita', new_clinic_appointment_path(clinic.id), class:"btn btn-primary button-color float-right" %>
+          <!-- <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right mt-auto"  %> -->
           </div>
           </div>
         </div>
