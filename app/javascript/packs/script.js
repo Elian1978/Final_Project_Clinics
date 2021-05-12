@@ -3,11 +3,6 @@ global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
 
-jQuery(function(){
-    alert ('Hola Bienvenido usted es el Usuario 10.000 te ganaste una Hamburguesa!!')
-    console.log(jQuery)
-    console.log($)
-  })
 
 var city = "Guapiles";
 
