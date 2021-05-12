@@ -43,7 +43,7 @@
 #     )
 # end 
 
-Admin.create!(email: 'admin@example.com', password: '123123', password_confirmation: '123123') if Rails.env.development?
+Admin.create!(email: 'admin@example.com', password: '123123') if Rails.env.development?
    
 
 
