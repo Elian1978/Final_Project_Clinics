@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   
   get "welcome_doctor", to: 'notes#index', as: :doctor_root
   get "welcome_patient", to: 'appointments#new', as: :patient_root
+  get "servicios", to: 'clinicservices#index', as: :clinicservices_root
+
 
 end
 

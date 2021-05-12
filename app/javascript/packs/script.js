@@ -2,6 +2,7 @@ import jQuery from "jquery"
 global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
+
 jQuery(function(){
     console.log('Ya esta instalado jQuery, y funciona!!')
     console.log(jQuery)

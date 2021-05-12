@@ -2,10 +2,8 @@
 
 <div class="weather-container">
       <img class="icon"><p class="weather text-dark"></p>
-      <p class="temp text-dark">La temperatura es de:</p>
+      <p class="temp text-dark">En Guápiles la temperatura es de:</p>
 </div>
-
-
 <button type="button" class="btn btn-lg btn-danger">Clinicas Disponibles</button>
 
 
@@ -59,10 +57,11 @@
            <!-- <h4 class="card-text ">Clínica: <%= clinic.name %></h4> -->
             <h5 class="card-text ">Teléfono: <%= clinic.phone%></h5>
             <h5 class="card-text">E-mail: <%= clinic.email %></h5>
-          <!--  <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>-->
+            <h5 class="card-text">Dirección: <%= clinic.adress %><br>Servicios: <%= clinic.information %></h5>
           <div class="mb-5">
               <%= link_to 'Obtener nueva Cita', new_clinic_appointment_path(clinic.id), class:"btn btn-primary button-color float-right" %>
-          <!-- <%= link_to 'Ver Servicios', new_patient_session_path, class:"btn btn-primary button-color float-right mt-auto"  %> -->
+              <%= link_to 'Ver Servicios', clinicservices_root_path, class:"btn btn-primary button-color float-right mt-auto"  %> 
+          
           </div>
           </div>
         </div>

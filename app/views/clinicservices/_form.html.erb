@@ -1,0 +1,54 @@
+<%= form_with(model: clinic) do |form| %>
+  <% if clinic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(clinic.errors.count, "error") %> prohibited this clinic from being saved:</h2>
+
+      <ul>
+        <% clinic.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+   <div class="form-group">
+    <%= form.file_field :logo, multiple: false, class:"form-control"  %>
+  </div>
+
+  
+  <div class="form-group">
+    <%= form.label :name, class:"control-label" %>
+    <%= form.text_field :name, class:"form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone, class:"control-label" %>
+    <%= form.text_field :phone, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email, class:"control-label" %>
+    <%= form.text_field :email, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :adress, class:"control-label" %>
+    <%= form.text_field :adress, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :information, class:"control-label" %>
+    <%= form.text_field :information, class:"form-control" %>
+  </div>
+
+  <%= image_tag @clinic.logo, class:"m-5 p-5" if @clinic.logo.attached? %>
+
+  <div class="actions">
+    <%= form.submit%>
+  </div>
+
+<% end %>
+
+
+ 

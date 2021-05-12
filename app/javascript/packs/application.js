@@ -17,3 +17,4 @@ ActiveStorage.start()
 import Chartkick from 'chartkick'
 import Highcharts from 'highcharts'
 window.Highcharts = Highcharts
+
